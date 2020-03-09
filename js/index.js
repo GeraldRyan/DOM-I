@@ -85,9 +85,18 @@ topContentText[4].innerText = siteContent["main-content"]["vision-content"]
 // {el.innerText = "The This"
 // })
 
-
-
-
-
 let middleImg = document.getElementById("middle-img")
 middleImg.setAttribute('src',siteContent["main-content"]["middle-img-src"] )
+
+// Contact and Footer
+
+let contactH4 = document.querySelector(".contact h4")
+let contactP = document.querySelectorAll(".contact p")
+
+contactH4.innerText = siteContent["contact"]["contact-h4"]
+contactP[0].innerText = siteContent["contact"]["address"]
+contactP[1].innerText = siteContent["contact"]["phone"]
+contactP[2].innerText = siteContent["contact"]["email"]
+
+let footerP = document.querySelector("footer p")
+footerP.innerText = siteContent["footer"]["copyright"]
