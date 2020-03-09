@@ -41,6 +41,10 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let nav1 = document.querySelector("nav a");
-console.log(nav1)
-nav1.innerHTML =siteContent["nav"]["nav-item-1"]
+let navLinks = document.querySelectorAll("nav a")  // won't work if other anchor tags are added later. Need to query more specifically
+console.log(navLinks.length)
+let nav = []
+for (i = 1; i<navLinks.length+1; i++){
+nav[i] = document.querySelector(`nav a:nth-child(${i})`);
+nav[i].innerText =siteContent["nav"]["nav-item-"+i];
+}
