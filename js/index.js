@@ -41,10 +41,21 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navLinks = document.querySelectorAll("nav a")  // won't work if other anchor tags are added later. Need to query more specifically
-console.log(navLinks.length)
+
+// Create Nav Bar
+let navLinks = document.querySelectorAll("nav a")
 let nav = []
 for (i = 1; i<navLinks.length+1; i++){
 nav[i] = document.querySelector(`nav a:nth-child(${i})`);
 nav[i].innerText =siteContent["nav"]["nav-item-"+i];
 }
+
+let codeSnipImg = document.getElementById("cta-img")
+codeSnipImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let h1 = document.querySelector(".cta-text h1")
+h1.innerText = siteContent['cta']['h1']
+
+let button = document.querySelector(".cta-text button")
+button.innerText = siteContent["cta"]["button"]
+// button.s
