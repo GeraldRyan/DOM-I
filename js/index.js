@@ -50,6 +50,8 @@ nav[i] = document.querySelector(`nav a:nth-child(${i})`);
 nav[i].innerText =siteContent["nav"]["nav-item-"+i];
 }
 
+
+// section cta
 let codeSnipImg = document.getElementById("cta-img")
 codeSnipImg.setAttribute('src', siteContent["cta"]["img-src"])
 
@@ -58,6 +60,34 @@ h1.innerText = siteContent['cta']['h1']
 
 let button = document.querySelector(".cta-text button")
 button.innerText = siteContent["cta"]["button"]
+
+
+
+// Section Main Content
+
+let topContentH4 = document.querySelectorAll(".text-content h4")
+let topContentText = document.querySelectorAll(".text-content p")
+topContentH4[0].innerText = siteContent["main-content"]["features-h4"]
+topContentH4[1].innerText = siteContent["main-content"]["about-h4"]
+topContentH4[2].innerText = siteContent["main-content"]["services-h4"]
+topContentH4[3].innerText = siteContent["main-content"]["product-h4"]
+topContentH4[4].innerText = siteContent["main-content"]["vision-h4"]
+
+topContentText[0].innerText = siteContent["main-content"]["features-content"]
+topContentText[1].innerText = siteContent["main-content"]["about-content"]
+topContentText[2].innerText = siteContent["main-content"]["services-content"]
+topContentText[3].innerText = siteContent["main-content"]["product-content"]
+topContentText[4].innerText = siteContent["main-content"]["vision-content"]
+
+
+// // Forsaken Method
+// topContentH4.forEach(  (el) =>
+// {el.innerText = "The This"
+// })
+
+
+
+
 
 let middleImg = document.getElementById("middle-img")
 middleImg.setAttribute('src',siteContent["main-content"]["middle-img-src"] )
