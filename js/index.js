@@ -58,4 +58,6 @@ h1.innerText = siteContent['cta']['h1']
 
 let button = document.querySelector(".cta-text button")
 button.innerText = siteContent["cta"]["button"]
-// button.s
+
+let middleImg = document.getElementById("middle-img")
+middleImg.setAttribute('src',siteContent["main-content"]["middle-img-src"] )
