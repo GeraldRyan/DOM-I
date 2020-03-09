@@ -42,13 +42,37 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
+
+
 // Create Nav Bar
 let navLinks = document.querySelectorAll("nav a")
+
 let nav = []
 for (i = 1; i<navLinks.length+1; i++){
 nav[i] = document.querySelector(`nav a:nth-child(${i})`);
 nav[i].innerText =siteContent["nav"]["nav-item-"+i];
 }
+
+// Make em Green
+nav.forEach( (el)=>{
+  el.style.color = "green"
+})
+
+let navBar = document.querySelector('nav')
+let appendNode = document.createElement('a')
+appendNode.innerText = "Appended"
+navBar.appendChild(appendNode)
+appendNode.style.color = 'green'
+let prependNode = document.createElement('a')
+prependNode.innerText = "prepended"
+prependNode.style.color = "green"
+navBar.prepend(prependNode)
+
+
+// Make em Green
+nav.forEach( (el)=>{
+  el.style.color = "green"
+})
 
 
 // section cta
