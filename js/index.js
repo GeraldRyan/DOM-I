@@ -125,4 +125,4 @@ contactP[2].innerText = siteContent["contact"]["email"]
 let footerP = document.querySelector("footer p")
 footerP.innerText = siteContent["footer"]["copyright"]
 
-// testing
+// testing again
