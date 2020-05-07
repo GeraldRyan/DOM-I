@@ -40,3 +40,89 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+
+// Create Nav Bar
+let navLinks = document.querySelectorAll("nav a")
+
+let nav = []
+for (i = 1; i<navLinks.length+1; i++){
+nav[i] = document.querySelector(`nav a:nth-child(${i})`);
+nav[i].innerText =siteContent["nav"]["nav-item-"+i];
+}
+
+// Make em Green
+nav.forEach( (el)=>{
+  el.style.color = "green"
+})
+
+let navBar = document.querySelector('nav')
+let appendNode = document.createElement('a')
+appendNode.innerText = "Appended"
+navBar.appendChild(appendNode)
+appendNode.style.color = 'green'
+let prependNode = document.createElement('a')
+prependNode.innerText = "prepended"
+prependNode.style.color = "green"
+navBar.prepend(prependNode)
+
+
+// Make em Green
+nav.forEach( (el)=>{
+  el.style.color = "green"
+})
+
+
+// section cta
+let codeSnipImg = document.getElementById("cta-img")
+codeSnipImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let h1 = document.querySelector(".cta-text h1")
+h1.innerText = siteContent['cta']['h1']
+
+let button = document.querySelector(".cta-text button")
+button.innerText = siteContent["cta"]["button"]
+
+
+
+// Section Main Content
+
+let topContentH4 = document.querySelectorAll(".text-content h4")
+let topContentText = document.querySelectorAll(".text-content p")
+topContentH4[0].innerText = siteContent["main-content"]["features-h4"]
+topContentH4[1].innerText = siteContent["main-content"]["about-h4"]
+topContentH4[2].innerText = siteContent["main-content"]["services-h4"]
+topContentH4[3].innerText = siteContent["main-content"]["product-h4"]
+topContentH4[4].innerText = siteContent["main-content"]["vision-h4"]
+
+topContentText[0].innerText = siteContent["main-content"]["features-content"]
+topContentText[1].innerText = siteContent["main-content"]["about-content"]
+topContentText[2].innerText = siteContent["main-content"]["services-content"]
+topContentText[3].innerText = siteContent["main-content"]["product-content"]
+topContentText[4].innerText = siteContent["main-content"]["vision-content"]
+
+
+// // Forsaken Method
+// topContentH4.forEach(  (el) =>
+// {el.innerText = "The This"
+// })
+
+let middleImg = document.getElementById("middle-img")
+middleImg.setAttribute('src',siteContent["main-content"]["middle-img-src"] )
+
+// Contact and Footer
+
+let contactH4 = document.querySelector(".contact h4")
+let contactP = document.querySelectorAll(".contact p")
+
+contactH4.innerText = siteContent["contact"]["contact-h4"]
+contactP[0].innerText = siteContent["contact"]["address"]
+contactP[1].innerText = siteContent["contact"]["phone"]
+contactP[2].innerText = siteContent["contact"]["email"]
+
+let footerP = document.querySelector("footer p")
+footerP.innerText = siteContent["footer"]["copyright"]
+
+// testing again
